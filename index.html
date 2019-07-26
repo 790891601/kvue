@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./KVue.js"></script>
+</head>
+<body>
+    <div id="app">
+        双向绑定
+        <div>
+            <div>
+                <input type="text" k-model="message" />
+            </div>
+			数据展示： {{message}}
+        </div>
+    </div>
+    <script>
+        const vm = new KVue({
+            el: "#app",
+            data: {
+                message: "debug data",
+                queue: "queue"
+            }
+        });
+
+
+        vm._data.message = "hello";
+    </script>
+</body>
+</html>
