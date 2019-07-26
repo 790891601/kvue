@@ -9,17 +9,12 @@
 </head>
 <body>
     <div id="app">
-        {{ message }}
+        双向绑定
         <div>
-            <div>
-                {{message}}
-            </div>
-            <div>
-                {{queue}} {{queue}}
-            </div>
             <div>
                 <input type="text" k-model="message" />
             </div>
+			数据展示： {{message}}
         </div>
     </div>
     <script>
